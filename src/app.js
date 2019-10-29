@@ -6,6 +6,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // Define Paths / Express Config
 const publicPath = path.join(__dirname, '.././public')
@@ -96,6 +97,6 @@ app.get('*', (req, res) => {
 
 // '<iframe src="https://giphy.com/embed/14uQ3cOFteDaU" width="100%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>'
 
-app.listen(3000, () => {
-    console.log('started...')
+app.listen(port, () => {
+    console.log('Server: Live...')
 })
